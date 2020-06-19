@@ -8,3 +8,11 @@ install:
 after_success:
   - firebase deploy --project satimage --token $FIREBASE_TOKEN
   - echo "Deployed!"
+before_deploy: "echo 'ready?'"
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  project: "satimage"
+after_deploy:
+  - echo "Deployed!"
