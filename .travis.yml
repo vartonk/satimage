@@ -1,4 +1,8 @@
-language: minimal
+language: node_js
+node_js:
+  - "6.14.5"
+script:
+  -
 deploy:
   provider: firebase
   token:
